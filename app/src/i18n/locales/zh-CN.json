@@ -1,0 +1,252 @@
+{
+  "common": {
+    "welcome": "欢迎来到汇纳肉业（广东）有限公司",
+    "phone": "400-888-9999",
+    "email": "info@huinameat.com",
+    "consultNow": "立即咨询",
+    "learnMore": "了解详情",
+    "readMore": "阅读更多",
+    "exploreProducts": "探索我们的产品",
+    "contactUs": "联系我们",
+    "joinNow": "立即咨询加盟",
+    "years": "年",
+    "plus": "+",
+    "day": "日",
+    "squareMeter": "㎡",
+    "ton": "吨",
+    "city": "城市",
+    "store": "家门店"
+  },
+  "nav": {
+    "home": "首页",
+    "about": "关于我们",
+    "products": "产品中心",
+    "production": "生产实力",
+    "news": "新闻资讯",
+    "franchise": "招商加盟",
+    "contact": "联系我们"
+  },
+  "hero": {
+    "subtitle": "汇纳肉业 · 新鲜品质",
+    "title1": "新鲜每一天",
+    "title2": "品质每一刻",
+    "description": "汇纳肉业——您值得信赖的生鲜猪肉及优质肉制品合作伙伴，已入驻全国57家山姆会员店，产品远销国内外约42个城市。"
+  },
+  "about": {
+    "subtitle": "关于我们",
+    "title": "冷鲜肉行业的佼佼者",
+    "companyName": "万勋肉业（广东）有限公司",
+    "description": "自2021年成立以来，一直致力于成为冷鲜肉行业的佼佼者。我们坚持务实、精工、利他、感恩的核心价值观，专注于为客户提供优质的冷鲜肉产品和全方位的解决方案。",
+    "description2": "作为中国领先的冷鲜猪肉供应商，我们拥有完整的产品线，从生产、加工、研发到物流销售一体化运营。我们不断创新，以为客户及消费者提供产品+服务一体化价值为宗旨，致力于满足消费者对健康美味肉类的需求。",
+    "description3": "公司总部设在深圳，业务辐射全国。我们以人为本，秉持精工匠心，不断推进技术创新，为客户提供优质、安全的肉类产品。",
+    "features": {
+      "quality": {
+        "title": "品质保证",
+        "desc": "严格的质量控制，贯穿从农场到餐桌的每个环节。"
+      },
+      "delivery": {
+        "title": "新鲜配送",
+        "desc": "全程冷链物流，确保最佳新鲜度。"
+      },
+      "team": {
+        "title": "专业团队",
+        "desc": "经验丰富的肉类专家，致力于卓越品质。"
+      }
+    },
+    "stats": {
+      "experience": "年行业经验",
+      "cities": "覆盖城市",
+      "stores": "山姆会员店"
+    },
+    "brand": {
+      "subtitle": "旗下品牌",
+      "name": "宅翁",
+      "title": "万勋企业自有品牌",
+      "description": "宅翁乃是万勋企业旗下的自有品牌，秉承精工品质、匠心传承的理念，致力于为消费者提供健康、美味、安全的肉类产品。从原料甄选到生产加工，每一个环节都严格把控，只为呈现最优质的产品。"
+    }
+  },
+  "products": {
+    "subtitle": "产品中心",
+    "title": "探索我们的优质产品",
+    "description": "从优质生鲜猪肉到加工肉制品，我们提供满足您业务需求的全面产品系列。",
+    "categories": {
+      "all": "全部",
+      "fresh": "生鲜猪肉",
+      "processed": "加工肉类",
+      "poultry": "禽类产品"
+    },
+    "items": {
+      "porkBelly": {
+        "name": "五花肉",
+        "desc": "大理石纹路完美，适合慢炖。"
+      },
+      "tenderloin": {
+        "name": "里脊肉",
+        "desc": "瘦肉嫩滑，适合快炒。"
+      },
+      "hindLeg": {
+        "name": "后腿肉",
+        "desc": "肉质鲜美，适合炖煮。"
+      },
+      "shoulder": {
+        "name": "梅花肉",
+        "desc": "细嫩多汁，煎烤皆宜。"
+      },
+      "frontLeg": {
+        "name": "前腿肉",
+        "desc": "肉质紧实，适合卤制。"
+      },
+      "trotters": {
+        "name": "猪蹄",
+        "desc": "胶质丰富，煲汤佳品。"
+      },
+      "thickCutPorkChop": {
+        "name": "厚切炸猪排",
+        "desc": "外酥里嫩，口感丰富，家庭料理首选。"
+      },
+      "taiwanSausageBlackPepper": {
+        "name": "台式香肠黑椒风味",
+        "desc": "经典台式风味，黑椒香气浓郁，独立包装更方便。"
+      },
+      "taiwanSausageGarlic": {
+        "name": "台式香肠蒜香风味",
+        "desc": "蒜香四溢，肉质紧实，传统台湾风味。"
+      },
+      "noodlesWithSausage": {
+        "name": "面条肠",
+        "desc": "270g装，搭配面条的完美选择，方便快捷。"
+      }
+    }
+  },
+  "production": {
+    "subtitle": "生产实力",
+    "title": "现代化设施，卓越品质",
+    "description": "我们的加工中心配备尖端技术和严格的质量控制体系，确保每一件产品都达到最高标准。",
+    "features": {
+      "haccp": {
+        "title": "HACCP认证设施",
+        "desc": "符合国际食品安全标准。"
+      },
+      "coldchain": {
+        "title": "全程冷链系统",
+        "desc": "温度控制从加工到配送。"
+      },
+      "equipment": {
+        "title": "先进加工设备",
+        "desc": "自动化生产线，精准高效。"
+      },
+      "quality": {
+        "title": "严格质量检测",
+        "desc": "多阶段检测，确保产品安全。"
+      }
+    },
+    "stats": {
+      "area": "加工中心",
+      "capacity": "日产能",
+      "passRate": "合格率"
+    }
+  },
+  "certificates": {
+    "subtitle": "资质认证",
+    "title": "值得信赖的认证",
+    "description": "我们的资质证明了对食品安全、质量标准和卓越运营的不懈追求。",
+    "items": {
+      "license": {
+        "name": "营业执照",
+        "desc": "官方企业注册"
+      },
+      "foodLicense": {
+        "name": "食品经营许可证",
+        "desc": "食品安全合规认证"
+      },
+      "haccp": {
+        "name": "HACCP认证",
+        "desc": "危害分析与关键控制点"
+      },
+      "iso": {
+        "name": "ISO 22000",
+        "desc": "国际食品安全标准"
+      }
+    }
+  },
+  "news": {
+    "subtitle": "新闻资讯",
+    "title": "最新动态",
+    "description": "了解汇纳肉业的最新新闻、行业洞察和公司动态。",
+    "articles": {
+      "expansion": {
+        "title": "汇纳肉业入驻57家山姆会员店",
+        "desc": "我们很高兴宣布汇纳肉业产品已入驻全国57家山姆会员店，覆盖42个城市..."
+      },
+      "certification": {
+        "title": "食品安全认证更新",
+        "desc": "我们继续保持最高食品安全标准，顺利通过年度审核..."
+      },
+      "holiday": {
+        "title": "数字化营销新布局",
+        "desc": "积极拥抱数字化营销，在美团、抖音、微信小程序等热门线上平台入驻销售..."
+      },
+      "technology": {
+        "title": "新加工技术",
+        "desc": "投资先进加工设备以提升品质，引进国际领先的肉类加工技术..."
+      }
+    }
+  },
+  "franchise": {
+    "subtitle": "招商加盟",
+    "title": "加入汇纳大家庭",
+    "description": "成为我们的合作伙伴，共同拓展生鲜猪肉市场。我们提供全方位支持，助您成功创业。",
+    "benefits": {
+      "brand": {
+        "title": "品牌支持",
+        "desc": "使用汇纳肉业知名品牌"
+      },
+      "supply": {
+        "title": "产品供应",
+        "desc": "稳定优质的产品供应保障"
+      },
+      "marketing": {
+        "title": "营销支持",
+        "desc": "专业的营销推广方案"
+      },
+      "training": {
+        "title": "培训体系",
+        "desc": "完善的业务培训支持"
+      }
+    },
+    "stats": {
+      "partners": "覆盖城市",
+      "experience": "年行业经验"
+    }
+  },
+  "footer": {
+    "address": {
+      "title": "公司地址",
+      "content": "深圳市龙华区观湖街道",
+      "detail": "樟坑径社区上围村宝业路4号"
+    },
+    "phone": {
+      "title": "联系电话",
+      "content": "400-888-9999",
+      "detail": "周一至周六 8:00-18:00"
+    },
+    "email": {
+      "title": "电子邮箱",
+      "content": "info@huinameat.com",
+      "detail": "商务合作"
+    },
+    "hours": {
+      "title": "营业时间",
+      "content": "周一至周六",
+      "detail": "8:00-18:00"
+    },
+    "copyright": "© 2024 汇纳肉业（广东）有限公司 版权所有",
+    "icp": "粤ICP备XXXXXXXX号"
+  },
+  "language": {
+    "select": "选择语言",
+    "zhCN": "简体中文",
+    "enUS": "English",
+    "zhHK": "繁體中文"
+  }
+}
