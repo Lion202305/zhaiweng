@@ -18,12 +18,38 @@
 
         html {
             scroll-behavior: smooth;
+            overflow: hidden;
         }
 
         body {
             font-family: 'AlimamaShuHeiTi', Arial, sans-serif;
             color: #333;
             overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        /* 全屏滚动容器 */
+        .fullpage-wrapper {
+            height: calc(100vh - 70px);
+            margin-top: 70px;
+            overflow-y: scroll;
+            scroll-snap-type: y proximity;
+            scroll-behavior: smooth;
+        }
+
+        .fullpage-wrapper::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* 全屏section */
+        .section-fullpage {
+            min-height: calc(100vh - 70px);
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
         }
 
         .container {
@@ -53,12 +79,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 25px 0;
+            padding: 10px 0;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .navbar-wrapper.scrolled .navbar {
-            padding: 15px 0;
+            padding: 6px 0;
         }
 
         .logo {
@@ -171,8 +197,7 @@
         .hero {
             position: relative;
             height: calc(100vh - 70px);
-            min-height: 600px;
-            margin-top: 70px;
+            min-height: calc(100vh - 70px);
             background: url('images/1/di.png') no-repeat center center/cover;
             display: flex;
             align-items: center;
@@ -262,7 +287,8 @@
         /* 关于我们 */
         .about {
             background: #f9f9f9;
-            padding: 100px 0;
+            padding: 0;
+            height: calc(100vh - 70px);
         }
 
         .about-content {
@@ -276,9 +302,10 @@
 
         /* 品牌介绍 */
         .brand-intro {
-            padding: 120px 0;
+            padding: 0;
+            height: calc(100vh - 70px);
             background: 
-                url('images/3/ZOWINN.png') no-repeat center center/40%,
+                url('images/3/ZOWINN.png') no-repeat center center/80%,
                 url('images/2/hongdi.png') no-repeat center center/cover;
             color: white;
             position: relative;
@@ -322,7 +349,8 @@
         /* 品牌文化 */
         .brand-culture {
             background: linear-gradient(to bottom, #fff 0%, #f8f8f8 100%);
-            padding: 120px 0;
+            padding: 0;
+            height: calc(100vh - 70px);
             position: relative;
             overflow: hidden;
         }
@@ -418,14 +446,14 @@
 
         /* 品牌理念 */
         .brand-values {
-            padding: 120px 0;
+            padding: 0;
+            height: calc(100vh - 70px);
             background-image: url('images/5/ditu.png');
             background-repeat: no-repeat;
             background-position: center center;
             background-size: cover;
             color: white;
             position: relative;
-            min-height: 100%;
         }
 
         .brand-values::before {
@@ -534,11 +562,17 @@
         /* 品牌故事 */
         .brand-story {
             position: relative;
-            min-height: 1000px;
+            height: calc(100vh - 70px);
+            min-height: calc(100vh - 70px);
             background: url('images/6/story.png') no-repeat center center/cover;
             display: flex;
             align-items: center;
             justify-content: flex-end;
+            overflow-y: auto;
+        }
+
+        .brand-story::-webkit-scrollbar {
+            display: none;
         }
 
         .brand-story::before {
@@ -554,8 +588,14 @@
             position: relative;
             z-index: 1;
             width: 50%;
-            padding-right: 10%;
+            padding: 80px 10% 40px 0;
             color: white;
+            max-height: 100%;
+            overflow-y: auto;
+        }
+
+        .brand-story-content::-webkit-scrollbar {
+            display: none;
         }
 
         .brand-story-header {
@@ -611,13 +651,20 @@
 
         /* 产品中心 */
         .product-center {
-            padding: 120px 0;
+            padding: 0;
+            height: calc(100vh - 70px);
             background: #fff;
+            overflow-y: auto;
+        }
+
+        .product-center::-webkit-scrollbar {
+            display: none;
         }
 
         .product-center-header {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 20px;
+            padding-top: 20px;
         }
 
         .product-center-header h2 {
@@ -630,13 +677,15 @@
         .product-center-header h3 {
             font-size: 24px;
             color: #333;
-            font-weight: 500;
+            font-weight: 300;
         }
 
         .product-main {
             display: flex;
             gap: 60px;
-            margin-bottom: 80px;
+            margin-top: 60px;
+            margin-bottom: 20px;
+            max-height: 500px;
         }
 
         .product-image-large {
@@ -644,6 +693,8 @@
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            max-height: 50%;
+            max-width: 40%;
         }
 
         .product-image-large img {
@@ -654,15 +705,16 @@
 
         .product-info {
             flex: 1;
-            padding: 20px 0;
+            padding: 10px 0;
+            margin-left: 30px;
         }
 
         .product-tabs {
             display: flex;
             gap: 30px;
-            margin-bottom: 30px;
+            margin-bottom: 15px;
             border-bottom: 2px solid #eee;
-            padding-bottom: 15px;
+            padding-bottom: 10px;
         }
 
         .product-tab {
@@ -689,41 +741,41 @@
         }
 
         .product-specs {
-            margin-bottom: 30px;
+            margin-bottom: 15px;
         }
 
         .product-specs h4 {
             font-size: 18px;
             color: #333;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             font-weight: 600;
         }
 
         .product-specs p {
             font-size: 15px;
             color: #666;
-            line-height: 1.8;
-            margin-bottom: 8px;
+            line-height: 1.6;
+            margin-bottom: 5px;
         }
 
         .product-features {
             background: #f9f9f9;
-            padding: 25px;
+            padding: 15px;
             border-radius: 12px;
         }
 
         .product-features h4 {
             font-size: 18px;
             color: #333;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             font-weight: 600;
         }
 
         .product-features p {
             font-size: 14px;
             color: #666;
-            line-height: 1.8;
-            margin-bottom: 6px;
+            line-height: 1.5;
+            margin-bottom: 4px;
         }
 
         .product-features strong {
@@ -732,13 +784,13 @@
         }
 
         .tech-features {
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
 
         .tech-features h4 {
             font-size: 18px;
             color: #333;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             font-weight: 600;
         }
 
@@ -746,8 +798,8 @@
             display: flex;
             align-items: flex-start;
             gap: 15px;
-            margin-bottom: 20px;
-            padding: 15px;
+            margin-bottom: 10px;
+            padding: 10px;
             background: #f9f9f9;
             border-radius: 12px;
             transition: all 0.3s ease;
@@ -798,7 +850,8 @@
 
         /* 加盟合作 */
         .franchise-cooperation {
-            padding: 120px 0;
+            padding: 0;
+            height: calc(100vh - 70px);
             background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
             position: relative;
             overflow: hidden;
@@ -906,7 +959,8 @@
 
         /* 新闻中心 */
         .news-center {
-            padding: 100px 0;
+            padding: 0;
+            height: calc(100vh - 70px);
             background: #fff;
         }
 
@@ -1092,13 +1146,14 @@
             color: #333;
             margin-bottom: 30px;
             font-weight: 600;
-            text-align: center;
+            text-align: left;
         }
 
         .product-cards {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
+            gap: 20px;
+            padding-bottom: 40px;
         }
 
         .product-card {
@@ -1116,7 +1171,7 @@
 
         .product-card-image {
             width: 100%;
-            height: 200px;
+            height: 150px;
             overflow: hidden;
         }
 
@@ -1161,15 +1216,25 @@
         /* 页脚 */
         .footer {
             background: #f5f5f5;
-            padding: 60px 0 30px;
+            padding: 20px 0 15px;
+            margin-top: 0;
+            min-height: auto;
+            height: auto;
+            display: block;
+            scroll-snap-align: start;
+            scroll-snap-stop: normal;
+        }
+
+        .footer .container {
+            display: block;
         }
 
         .footer-nav {
             display: flex;
             justify-content: space-around;
-            padding-bottom: 40px;
+            padding-bottom: 15px;
             border-bottom: 1px solid #ddd;
-            margin-bottom: 40px;
+            margin-bottom: 15px;
         }
 
         .footer-nav a {
@@ -1186,8 +1251,8 @@
         .footer-content {
             display: flex;
             justify-content: space-between;
-            gap: 60px;
-            margin-bottom: 40px;
+            gap: 30px;
+            margin-bottom: 15px;
         }
 
         .footer-contact {
@@ -1197,20 +1262,20 @@
         .footer-contact h4 {
             font-size: 18px;
             color: #333;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             font-weight: 600;
         }
 
         .footer-contact p {
             font-size: 14px;
             color: #666;
-            line-height: 2;
-            margin-bottom: 8px;
+            line-height: 1.6;
+            margin-bottom: 5px;
         }
 
         .footer-qr-codes {
             display: flex;
-            gap: 40px;
+            gap: 20px;
         }
 
         .qr-item {
@@ -1218,9 +1283,9 @@
         }
 
         .qr-item img {
-            width: 100px;
-            height: 100px;
-            margin-bottom: 10px;
+            width: 80px;
+            height: 80px;
+            margin-bottom: 5px;
             background: #fff;
             padding: 5px;
             border-radius: 8px;
@@ -1234,11 +1299,11 @@
         .footer-service {
             display: flex;
             justify-content: center;
-            gap: 30px;
-            padding: 20px 0;
+            gap: 15px;
+            padding: 10px 0;
             border-top: 1px solid #ddd;
             border-bottom: 1px solid #ddd;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             flex-wrap: wrap;
         }
 
@@ -1605,8 +1670,8 @@
 
             .product-main {
                 flex-direction: column;
-                gap: 30px;
-                margin-bottom: 40px;
+                gap: 20px;
+                margin-bottom: 20px;
             }
 
             .product-image-large {
@@ -1782,14 +1847,18 @@
 
             /* 页脚 */
             .footer {
-                padding: 40px 0 20px;
+                padding: 15px 0 10px;
+                min-height: auto;
+                height: auto;
+                scroll-snap-align: start;
+                scroll-snap-stop: normal;
             }
 
             .footer-nav {
                 flex-wrap: wrap;
-                gap: 12px;
-                padding-bottom: 25px;
-                margin-bottom: 25px;
+                gap: 10px;
+                padding-bottom: 10px;
+                margin-bottom: 10px;
             }
 
             .footer-nav a {
@@ -1798,13 +1867,13 @@
 
             .footer-content {
                 flex-direction: column;
-                gap: 30px;
-                margin-bottom: 25px;
+                gap: 15px;
+                margin-bottom: 10px;
             }
 
             .footer-contact h4 {
                 font-size: 16px;
-                margin-bottom: 15px;
+                margin-bottom: 8px;
             }
 
             .footer-contact p {
@@ -1829,8 +1898,8 @@
             .footer-service {
                 flex-direction: column;
                 align-items: center;
-                gap: 8px;
-                padding: 15px 0;
+                gap: 5px;
+                padding: 8px 0;
             }
 
             .service-item {
@@ -1881,10 +1950,10 @@
                 </div>
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#home">首页</a></li>
-                    <li><a href="#about">关于我们</a></li>
-                    <li><a href="#brand">品牌</a></li>
-                    <li><a href="#culture">文化</a></li>
-                    <li><a href="#contact">联系方式</a></li>
+                    <li><a href="#about">品牌中心</a></li>
+                    <li><a href="#brand">产品中心</a></li>
+                    <li><a href="#culture">加盟合作</a></li>
+                    <li><a href="#contact">新闻中心</a></li>
                 </ul>
                 <div class="lang-switch">
                     <span class="lang-active">中文</span>
@@ -1895,16 +1964,20 @@
         </div>
     </div>
 
+    <!-- 全屏滚动容器 -->
+    <div class="fullpage-wrapper">
+
     <!-- 英雄区域 -->
-    <section class="hero" id="home">
+    <section class="hero section-fullpage" id="home">
         <div class="hero-content">
-            <h1>宅翁 · 生制冷鲜肉肠创造者</h1>
-            <p>金牛品质 · 做安全健康的冷鲜肉肠</p>
+            <h1>宅翁 · 生制冷鲜肉肠领创者</h1>
+            <br>
+            <h2>牛马口粮，就吃宅翁生制冷鲜肠</h2>
         </div>
     </section>
 
     <!-- 关于我们 -->
-    <section class="about" id="about">
+    <section class="about section-fullpage" id="about">
         <div class="container">
             <div class="about-content">
                 <div class="about-image scroll-reveal-scale">
@@ -1915,14 +1988,14 @@
     </section>
 
     <!-- 品牌介绍 -->
-    <section class="brand-intro" id="brand">
+    <section class="brand-intro section-fullpage" id="brand">
         <div class="container">
             <div class="brand-intro-content">
                 <div class="brand-intro-text scroll-reveal-left">
                     <h2>品牌简介</h2>
-                    <p>宅翁专注生制冷鲜肉肠研发、生产与销售，以"匠心品质"为核心优势，</p>
-                    <p>聚焦年轻消费市场，坚守品质、健康、管理理念，致力于成为中国生制冷鲜肉肠第一品牌。</p>
-                    <p>公司实现安全全产业链、透明化生产、全渠道覆盖，用高品质美味服务千万家。</p>
+                    <p>宅翁专注生制冷鲜肉肠研发、生产与销售，以 “无尘冷灌” 为核心技术，</p>
+                    <p>聚焦年轻职场白领，坚守原鲜、健康、便捷理念，致力于成为中国生制冷鲜肉肠第一品牌。</p>
+                    <p>公司实现全产业链管控、透明化生产、全域渠道覆盖，用高品质鲜肉肠服务千万家庭。</p>
                 </div>
                 <div class="brand-intro-map scroll-reveal-right">
                     <img src="images/3/ditu.png" alt="中国地图">
@@ -1932,16 +2005,19 @@
     </section>
 
     <!-- 品牌文化 -->
-    <section class="brand-culture" id="culture">
+    <section class="brand-culture section-fullpage" id="culture">
         <div class="container">
-            <h2 class="scroll-reveal">品牌文化</h2>
             <div class="culture-content">
                 <div class="culture-text scroll-reveal-left">
                     <h3 class="brand-title">BRAND</h3>
                     <h3>品牌定位</h3>
+                    <br>
+                    <br>
                     <p>宅翁--生制冷鲜肉肠领创者</p>
-                    <h3>核心价值观</h3>
-                    <p>诚信、创新、品质、服务是宅翁的核心价值观，我们始终坚持以消费者为中心，不断满足消费者的需求和期望。</p>
+                    <p>以无尘冷灌为核心技术壁垒，主打生制、冷鲜、原鲜本味，</p>
+                    <p>区别于传统熟制肠、冷冻肠与手工现灌肠，</p>
+                    <p>为快节奏职场提供<font color="red">健康、便捷、精致</font>的鲜肉肠解决方案。</p>
+                    <br>
                     <div class="wuchen-btn">无尘冷灌</div>
                 </div>
                 <div class="culture-image scroll-reveal-right">
@@ -1952,7 +2028,7 @@
     </section>
 
     <!-- 品牌理念 -->
-    <section class="brand-values">
+    <section class="brand-values section-fullpage">
         <div class="container">
             <div class="brand-values-header scroll-reveal">
                 <h2>BRAND</h2>
@@ -1977,29 +2053,28 @@
     </section>
 
     <!-- 品牌故事 -->
-    <section class="brand-story" id="contact">
+    <section class="brand-story section-fullpage" id="contact">
         <div class="brand-story-content scroll-reveal-right">
             <div class="brand-story-header">
                 <h2>BRAND</h2>
                 <h3>品牌故事</h3>
             </div>
             <div class="story-tabs">
-                <div class="story-tab active">起源</div>
-                <div class="story-tab">初心</div>
+                <div class="story-tab active" data-tab="origin">缘起</div>
+                <div class="story-tab" data-tab="intention">初心</div>
             </div>
-            <div class="story-text-content">
+            <div class="story-text-content active" id="story-origin">
                 <p>快节奏时代，过度加工食品充斥市场，便捷却失去食物本真味道与营养。宅翁创始人怀揣对原生美味的执念，决心打破行业痛点，打造一款真正新鲜、无添加、冷鲜锁味的生制冷鲜肉肠，让人们重新品尝到食物最本真的鲜香。</p>
+            </div>
+            <div class="story-text-content" id="story-intention" style="display: none;">
+                <p>为城市工作的年轻人而生。一顿简单安心的鲜肉肠，不只是能量补充，更是情绪慰藉。宅翁希望用一份烟火气，陪伴每一个忙碌清晨、加班夜晚、独处时刻，让生活多一份温暖与治愈。</p>
             </div>
         </div>
     </section>
 
     <!-- 产品中心 -->
-    <section class="product-center">
+    <section class="product-center section-fullpage">
         <div class="container">
-            <div class="product-center-header scroll-reveal">
-                <h2>产品中心</h2>
-                <h3>PRODUCT CENTER</h3>
-            </div>
             
             <!-- 产品主展示区域 -->
             <div class="product-main">
@@ -2007,6 +2082,10 @@
                     <img src="images/qie/7/datu.png" alt="产品大图">
                 </div>
                 <div class="product-info scroll-reveal-right">
+                    <div class="product-center-header scroll-reveal">
+                        <h2>产品中心</h2>
+                        <h3>PRODUCT CENTER</h3>
+                    </div>                    
                     <div class="product-tabs">
                         <div class="product-tab active" data-tab="product">产品</div>
                         <div class="product-tab" data-tab="tech">技术</div>
@@ -2070,7 +2149,7 @@
                 <div class="product-cards">
                     <div class="product-card scroll-reveal-scale" style="transition-delay: 0.1s;">
                         <div class="product-card-image">
-                            <img src="images/qie/7/1.png" alt="原味生制冷鲜肠">
+                            <img src="images/qie/7/2.png" alt="原味生制冷鲜肠">
                         </div>
                         <div class="product-card-content">
                             <span class="product-card-tag">鲜肉占比≥90%</span>
@@ -2081,7 +2160,7 @@
                     
                     <div class="product-card scroll-reveal-scale" style="transition-delay: 0.2s;">
                         <div class="product-card-image">
-                            <img src="images/qie/7/2.png" alt="黑胡椒生制冷鲜肠">
+                            <img src="images/qie/7/1.png" alt="黑胡椒生制冷鲜肠">
                         </div>
                         <div class="product-card-content">
                             <h4>黑胡椒生制冷鲜肠（经典款）</h4>
@@ -2114,7 +2193,7 @@
     </section>
 
     <!-- 加盟合作 -->
-    <section class="franchise-cooperation">
+    <section class="franchise-cooperation section-fullpage">
         <div class="container">
             <div class="franchise-content">
                 <div class="franchise-left scroll-reveal-left">
@@ -2186,7 +2265,7 @@
     </section>
 
     <!-- 新闻中心 -->
-    <section class="news-center">
+    <section class="news-center section-fullpage">
         <div class="container">
             <div class="news-center-header scroll-reveal">
                 <h2>新闻中心</h2>
@@ -2421,6 +2500,8 @@
         </div>
     </footer>
 
+    </div>
+
     <script>
         // 导航栏滚动效果
         window.addEventListener('scroll', function() {
@@ -2481,6 +2562,30 @@
                 const tabName = this.getAttribute('data-tab');
                 document.getElementById('product-content').style.display = tabName === 'product' ? 'block' : 'none';
                 document.getElementById('tech-content').style.display = tabName === 'tech' ? 'block' : 'none';
+            });
+        });
+
+        // 品牌故事标签切换
+        document.querySelectorAll('.story-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // 移除所有active类
+                document.querySelectorAll('.story-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.story-text-content').forEach(c => c.classList.remove('active'));
+                
+                // 添加active类到当前标签
+                this.classList.add('active');
+                
+                // 切换内容显示
+                const tabName = this.getAttribute('data-tab');
+                document.getElementById('story-' + tabName).classList.add('active');
+                document.getElementById('story-' + tabName).style.display = 'block';
+                
+                // 隐藏其他内容
+                document.querySelectorAll('.story-text-content').forEach(content => {
+                    if (content.id !== 'story-' + tabName) {
+                        content.style.display = 'none';
+                    }
+                });
             });
         });
 
