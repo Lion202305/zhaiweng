@@ -570,6 +570,21 @@
             object-fit: cover;
         }
 
+        #brand-map {
+            position: relative;
+            width: 100vw;
+            min-height: calc(100vh - 70px);
+            padding: 0;
+            margin: 0;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
         #brand-story {
             background: url('images/6/story.png') no-repeat center center/cover;
             position: relative;
@@ -1643,6 +1658,7 @@
                         <a href="#brand-center" class="dropdown-trigger">品牌中心</a>
                         <ul class="dropdown-menu">
                             <li><a href="#brand-center" class="dropdown-item" data-tab="intro">品牌简介</a></li>
+                            <li><a href="#brand-center" class="dropdown-item" data-tab="map">全国布局</a></li>
                             <li><a href="#brand-center" class="dropdown-item" data-tab="culture">品牌定位</a></li>
                             <li><a href="#brand-center" class="dropdown-item" data-tab="values">品牌理念</a></li>
                             <li><a href="#brand-center" class="dropdown-item" data-tab="story">品牌故事</a></li>
@@ -1670,8 +1686,23 @@
     <!-- 品牌中心 -->
     <section id="brand-center" class="content-section brand-center">
         <div class="container">
-            <!-- 默认显示地图图片 -->
+            <!-- 默认显示品牌简介 -->
             <div class="brand-tab-content active" id="brand-intro">
+                <div class="brand-intro-content">
+                    <div class="brand-intro-text">
+                        <h2>品牌简介</h2>
+                        <p>宅翁专注生制冷鲜肉肠研发、生产与销售，以"无尘冷灌"为核心技术，</p>
+                        <p>聚焦年轻职场白领，坚守原鲜、健康、便捷理念，致力于成为中国生制冷鲜肉肠第一品牌。</p>
+                        <p>公司实现全产业链管控、透明化生产、全渠道覆盖，用高品质鲜肉肠服务千万家。</p>
+                    </div>
+                    <div class="brand-intro-map">
+                        <img src="images/3/ZOWINN.png" alt="品牌展示">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 全国布局 -->
+            <div class="brand-tab-content" id="brand-map">
                 <img src="images/2/ditu.png" alt="地图" class="brand-map-full">
             </div>
 
