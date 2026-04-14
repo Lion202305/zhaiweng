@@ -83,6 +83,9 @@
             display: flex;
             list-style: none;
             gap: 40px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 100px;
         }
 
         .nav-links li {
@@ -157,25 +160,13 @@
             position: absolute;
             top: 100%;
             left: 0;
-            margin-top: 0;
-            padding-top: 10px;
-            background: transparent;
+            margin-top: 15px;
+            background: #fff;
             border-radius: 4px;
             z-index: 1000;
             min-width: 100px;
-        }
-
-        .nav-links .dropdown-menu::before {
-            content: '';
-            position: absolute;
-            top: 10px;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: #fff;
-            border-radius: 4px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            z-index: -1;
+            padding: 8px 0;
         }
 
         .nav-links .dropdown:hover .dropdown-menu {
@@ -1855,6 +1846,11 @@
                     <li><a href="#news">新闻中心</a></li>
                     <li><a href="#contact">联系我们</a></li>
                 </ul>
+                <div class="lang-switch" id="langSwitch">
+                    <span class="lang-active">中</span>
+                    <span>/</span>
+                    <span>EN</span>
+                </div>
             </nav>
         </div>
     </div>
